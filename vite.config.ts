@@ -11,4 +11,5 @@ export default defineConfig({
     autoCodeSplitting: true,
   }),
   react()],
+  base: "/collesort-web/",
 });
