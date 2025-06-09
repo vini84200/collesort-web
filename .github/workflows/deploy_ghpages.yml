@@ -39,6 +39,8 @@ jobs:
         with:
           node-version: 22.16
           cache: 'pnpm'
+      - name: Create pkg directory
+        run: wasm-pack build --outdir pkg
       - name: Install dependencies
         run: pnpm install
       - name: Build
