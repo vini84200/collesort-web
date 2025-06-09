@@ -42,7 +42,7 @@ jobs:
       - name: Install wasm-pack
         run: cargo install wasm-pack
       - name: Create pkg directory
-        run: wasm-pack build --outdir pkg
+        run: wasm-pack build -d pkg
       - name: Install dependencies
         run: pnpm install
       - name: Build
