@@ -5,11 +5,23 @@ import react from "@vitejs/plugin-react-swc";
 import TanStackRouterVite from "@tanstack/router-plugin/vite";
 
 export default defineConfig({
-  plugins: [wasm(), topLevelAwait(),
-  TanStackRouterVite({
-    target: "react",
-    autoCodeSplitting: true,
-  }),
-  react()],
+  plugins: [
+    wasm(),
+    topLevelAwait(),
+    TanStackRouterVite({
+      target: "react",
+      autoCodeSplitting: true,
+    }),
+    react()
+  ],
+  worker: {
+    // Not needed with vite-plugin-top-level-await >= 1.3.0
+    format: "es",
+    // @ts-expect-error
+    plugins: [
+      wasm(),
+      // topLevelAwait()
+    ]
+  },
   base: "/collesort-web/",
 });
