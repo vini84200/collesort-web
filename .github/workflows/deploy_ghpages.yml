@@ -38,7 +38,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.16
-          cache: 'pnpm'
+          cache: "pnpm"
+      - name: Install wasm-pack
+        run: cargo install wasm-pack
       - name: Create pkg directory
         run: wasm-pack build --outdir pkg
       - name: Install dependencies
