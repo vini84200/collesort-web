@@ -44,9 +44,6 @@ importers:
       tailwindcss:
         specifier: ^4.1.8
         version: 4.1.8
-      wasm-on-web:
-        specifier: file:pkg
-        version: collesort-web@file:pkg
     devDependencies:
       '@tanstack/react-router':
         specifier: ^1.120.20
@@ -828,9 +825,6 @@ packages:
   clsx@2.1.1:
     resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
     engines: {node: '>=6'}
-
-  collesort-web@file:pkg:
-    resolution: {directory: pkg, type: directory}
 
   color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -2395,8 +2389,6 @@ snapshots:
   chownr@3.0.0: {}
 
   clsx@2.1.1: {}
-
-  collesort-web@file:pkg: {}
 
   color-convert@1.9.3:
     dependencies:
