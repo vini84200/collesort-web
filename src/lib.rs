@@ -1,6 +1,6 @@
 mod utils;
 
-use futsolver::{groups_iterative, Solution};
+use futsolver::{groups, Solution};
 use wasm_bindgen::prelude::*;
 use web_sys::console::{self, log};
 
@@ -86,11 +86,15 @@ pub fn run_collesort_with<const SIZE: usize, const K: usize>(
     let input = futsolver::prepare_input::<SIZE>(array);
     let upperbound = futsolver::greedy_upper_bound::<SIZE, K>(input);
 
-    console::log_1(&format!(
-        "Running ColleSort with SIZE: {}, K: {}, upperbound: {}",
-        SIZE, K, upperbound
-    ).into());
-    let groups_iter = groups_iterative::<SIZE, K>(input, upperbound);
+    console::log_1(
+        &format!(
+            "Running ColleSort with SIZE: {}, K: {}, upperbound: {}",
+            SIZE, K, upperbound
+        )
+        .into(),
+    );
+    let groups_iter = groups::<SIZE, K>(input);
+    console::log_1(&"Groups iterator created".into());
 
     for Solution {
         solution,

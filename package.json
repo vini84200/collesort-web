@@ -6,9 +6,11 @@
   "scripts": {
     "build": "run-s wasm-pack:release tsc vite:build",
     "dev": "run-s wasm-pack:dev vite:dev",
+    "dev-h": "run-s wasm-pack:dev vite:dev-h",
     "tsc": "tsc",
     "vite:build": "vite build",
     "vite:dev": "vite -c vite.config.dev.ts",
+    "vite:dev-h": "vite -c vite.config.dev.ts --host",
     "vite:preview": "vite preview",
     "wasm-pack:dev": "wasm-pack build --dev",
     "wasm-pack:release": "wasm-pack build"
