@@ -3,6 +3,7 @@ import wasm from "vite-plugin-wasm";
 import topLevelAwait from "vite-plugin-top-level-await";
 import react from "@vitejs/plugin-react-swc";
 import TanStackRouterVite from "@tanstack/router-plugin/vite";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [
@@ -12,7 +13,8 @@ export default defineConfig({
       target: "react",
       autoCodeSplitting: true,
     }),
-    react()
+    react(),
+    tailwindcss()
   ],
   worker: {
     // Not needed with vite-plugin-top-level-await >= 1.3.0

@@ -1,15 +1,15 @@
 import { useMutation } from "@tanstack/react-query";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, createHashHistory } from "@tanstack/react-router";
 import ColleWorker from "../worker.ts?worker";
 import { useState } from "react";
-import {
-  useForm,
-  type AnyFieldApi,
-} from "@tanstack/react-form";
+import { useForm, type AnyFieldApi } from "@tanstack/react-form";
 import ReactTimeAgo from "react-time-ago";
+
+const hashHistory = createHashHistory();
 
 export const Route = createFileRoute("/")({
   component: Index,
+  history: hashHistory,
 });
 
 interface Time {
