@@ -5,11 +5,11 @@ import { useState } from "react";
 import { useForm, type AnyFieldApi } from "@tanstack/react-form";
 import ReactTimeAgo from "react-time-ago";
 
-const hashHistory = createHashHistory();
+// const hashHistory = createHashHistory();
 
 export const Route = createFileRoute("/")({
   component: Index,
-  history: hashHistory,
+  // history: hashHistory,
 });
 
 interface Time {
